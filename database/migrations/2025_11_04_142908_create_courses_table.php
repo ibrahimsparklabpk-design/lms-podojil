@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('course_title' , 255);
+             $table->string('course_slug' , 255);
             $table->string('course_type' , 255);
             $table->decimal('course_price');
             $table->string('course_level');
@@ -29,6 +30,7 @@ return new class extends Migration
              // Resources
             $table->string('course_book')->nullable();         
             $table->string('course_video')->nullable();    
+
 
 
             $table->timestamps();

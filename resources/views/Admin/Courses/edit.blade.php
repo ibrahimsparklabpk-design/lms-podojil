@@ -85,6 +85,12 @@
           <small class="text-danger error-course_title"></small>
         </div>
 
+         <div class="form-row">
+          <label class="req">Course slug</label>
+          <input name="course_slug" type="text" class="control" placeholder="Enter course slug" readonly value="{{ $courses->course_slug }}">
+          <small class="text-danger error-course_slug"></small>
+        </div>
+
         <div class="form-row">
           <label>Course Type</label>
           <select name="course_type" class="control">
@@ -142,6 +148,16 @@
           <small class="text-danger error-course_language"></small>
         </div>
 
+          <div class="form-row">
+            <label>Status</label>
+           <select name="status" class="control">
+            <option value="">Select Status</option>
+            <option value="1" {{ $courses->status == 1 ? 'selected' : '' }}>Active</option>
+            <option value="0" {{ $courses->status == 0 ? 'selected' : '' }}>Inactive</option>
+           </select>
+            <small class="text-danger error-status"></small>
+        </div>
+
         <div class="form-row">
           <label>Course Thumbnail</label>
           <input name="course_thumbnail" type="file" class="control" accept=".jpg,.jpeg,.png" value="{{ $courses->course_thumbnail }}">
@@ -188,5 +204,44 @@
 
 
 @section('scripts')
+<script>
+  $('#courseeditform').submit(function(e){
+    e.preventDefault();
 
+    var formData = new FormData(this);
+
+    $.ajax({
+      url: "{{ route('courses.update', $courses->id) }}",
+      type: 'POST',
+      data: formData,
+      processData: false,
+      contentType: false,
+      success: function(res) {
+
+        $('small.text-danger').html(''); // old errors clear karo
+
+        // ✅ simplified validation
+        if (!res.status) {
+          $.each(res.errors, function(key, value) {
+            $('.error-' + key).html(value[0]);
+          });
+          return;
+        }
+
+        $('#msg').html('<p style="color:green;">' + res.message + '</p>');
+
+        if (res.redirect) {
+          window.location.href = res.redirect;
+        }
+
+        $('#courseeditform')[0].reset();
+      },
+      error: function(xhr){    //xhr ka full form ha xml http request or yahi wo comand ha jo ajex or jquery ma backend ma request bajta ha
+        console.log(xhr.responseText);
+        $('#msg').html('<p style="color:red;">Server Error! Try again.</p>');
+      }
+    });
+  });
+</script>
 @endsection
+

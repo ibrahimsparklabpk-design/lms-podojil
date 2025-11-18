@@ -8,6 +8,7 @@ class Courses extends Model
 {
     protected $fillable = [
        'course_title',
+         'course_slug',
         'course_type',
         'course_price',
         'course_level',
@@ -18,5 +19,6 @@ class Courses extends Model
         'course_thumbnail',
         'course_book',
         'course_video',
+        'status',
     ];
 }

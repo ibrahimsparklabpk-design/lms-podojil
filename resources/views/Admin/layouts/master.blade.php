@@ -240,11 +240,7 @@
                         <!-- Right Section -->
                         <div class="gap-12 d-flex align-items-center">
                             <!-- Create Course Button -->
-                            <a href="#"
-                                class="gap-8 px-20 py-10 text-white border shadow-sm nav-primary-btn rounded-pill text-14 d-lg-flex align-items-center d-none line-height-1 transition-03">
-                                <i class="fas fa-plus-circle text-16"></i>
-                                <span>Create Course</span>
-                            </a>
+                            
 
                             <!-- Language Selector -->
                             <div class="position-relative">
@@ -254,102 +250,7 @@
                                 </button> -->
                             </div>
 
-                            <!-- Notifications -->
-                            <div class="position-relative">
-                                <button
-                                    class="w-40 h-40 border-0 nav-icon-btn rounded-pill justify-content-center align-items-center d-flex text-18 text-neutral-600 position-relative transition-03"
-                                    type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="ph ph-bell-simple"></i>
-                                    <span class="notification-badge">2</span>
-                                </button>
-
-
-                                <!-- Notification Dropdown -->
-                                <ul class="p-0 overflow-hidden border-0 shadow-lg dropdown-menu notification-dropdown rounded-12"
-                                    style="min-width: 380px;">
-                                    <!-- Header -->
-                                    <div class="px-20 py-16 border-bottom border-neutral-40 bg-neutral-10">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <h6 class="mb-0 text-16 fw-semibold text-neutral-700">Notifications</h6>
-                                            <span class="text-12 text-neutral-500">2 Unread</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- Notification Items -->
-                                    <div class="overflow-auto max-h-300-px">
-                                        <!-- Notification 1 -->
-                                        <a class="gap-16 px-20 py-16 dropdown-item d-flex align-items-start border-bottom border-neutral-40 hover-bg-neutral-10 transition-03"
-                                            href="javascript:void(0)">
-                                            <div class="flex-shrink-0 mt-2">
-                                                <div
-                                                    class="w-44 h-44 bg-main-600 rounded-circle d-flex align-items-center justify-content-center">
-                                                    <i class="text-white fas fa-user-plus text-18"></i>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="mb-1 d-flex justify-content-between align-items-start">
-                                                    <span class="text-14 fw-semibold text-neutral-700">New Student
-                                                        Enrollment</span>
-                                                    <span class="flex-shrink-0 text-11 fw-medium text-neutral-400">23m
-                                                        ago</span>
-                                                </div>
-                                                <p class="mb-0 text-13 text-neutral-500">Sarah Johnson enrolled in your
-                                                    "Web Development" course</p>
-                                            </div>
-                                        </a>
-
-                                        <!-- Notification 2 -->
-                                        <a class="gap-16 px-20 py-16 dropdown-item d-flex align-items-start border-bottom border-neutral-40 hover-bg-neutral-10 transition-03"
-                                            href="javascript:void(0)">
-                                            <div class="flex-shrink-0 mt-2">
-                                                <div
-                                                    class="w-44 h-44 bg-warning-600 rounded-circle d-flex align-items-center justify-content-center">
-                                                    <i class="text-white fas fa-comment-alt text-18"></i>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="mb-1 d-flex justify-content-between align-items-start">
-                                                    <span class="text-14 fw-semibold text-neutral-700">New
-                                                        Message</span>
-                                                    <span class="flex-shrink-0 text-11 fw-medium text-neutral-400">1h
-                                                        ago</span>
-                                                </div>
-                                                <p class="mb-0 text-13 text-neutral-500">Mike Chen sent you a message
-                                                    about course materials</p>
-                                            </div>
-                                        </a>
-
-                                        <!-- Notification 3 -->
-                                        <a class="gap-16 px-20 py-16 dropdown-item d-flex align-items-start hover-bg-neutral-10 transition-03"
-                                            href="javascript:void(0)">
-                                            <div class="flex-shrink-0 mt-2">
-                                                <div
-                                                    class="w-44 h-44 bg-success-600 rounded-circle d-flex align-items-center justify-content-center">
-                                                    <i class="text-white fas fa-dollar-sign text-18"></i>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1">
-                                                <div class="mb-1 d-flex justify-content-between align-items-start">
-                                                    <span class="text-14 fw-semibold text-neutral-700">Payment
-                                                        Received</span>
-                                                    <span class="flex-shrink-0 text-11 fw-medium text-neutral-400">2h
-                                                        ago</span>
-                                                </div>
-                                                <p class="mb-0 text-13 text-neutral-500">Payment of $149.00 received for
-                                                    "Data Science" course</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <!-- Footer -->
-                                    <div class="px-20 py-12 bg-neutral-10 border-top border-neutral-40">
-                                        <a class="py-8 text-center dropdown-item text-main-600 fw-semibold text-14 d-block"
-                                            href="javascript:void(0)">
-                                            View All Notifications
-                                        </a>
-                                    </div>
-                                </ul>
-                            </div>
+                          
 
                             <!-- Messages -->
                             <div class="position-relative">
@@ -461,26 +362,7 @@
     <!-- Cahtbot Code Starts Here -->
 
     <!-- Add before closing body -->
-    <div class="chatbot-widget">
-        <div class="chatbot-toggle">
-            <i class="fas fa-robot"></i>
-        </div>
-        <div class="chatbot-container">
-            <div class="chatbot-header">
-                <h6 style="color: white;">Iashep Assistant</h6>
-                <button class="close-chat"><i class="fas fa-times"></i></button>
-            </div>
-            <div class="chatbot-messages">
-                <div class="message bot-message">
-                    <p>Hello! I'm your EduHub assistant. How can I help you today?</p>
-                </div>
-            </div>
-            <div class="chatbot-input">
-                <input type="text" placeholder="Type your message...">
-                <button><i class="fas fa-paper-plane"></i></button>
-            </div>
-        </div>
-    </div>
+   
     <!-- Cahtbot Code Ends Here -->
     <!-- ==========admin dashbord end============ -->
 
@@ -663,6 +545,30 @@
             }
         }
     </script>
+
+    <script>
+$(document).ready(function(){
+
+    // Function to generate slug
+    function generateSlug(text){
+        return text
+            .toLowerCase()               // lowercase
+            .trim()                       // remove leading/trailing spaces
+            .replace(/[^a-z0-9\s-]/g, '') // remove special chars
+            .replace(/\s+/g, '-')          // replace spaces with -
+            .replace(/-+/g, '-');          // remove multiple -
+    }
+
+    // On typing in course title
+    $('input[name="course_title"]').on('input', function(){
+        var title = $(this).val();
+        var slug = generateSlug(title);
+        $('input[name="course_slug"]').val(slug);
+    });
+
+});
+</script>
+
 </body>
 
 </html>
